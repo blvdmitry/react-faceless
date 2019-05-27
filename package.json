@@ -1,0 +1,21 @@
+{
+  "name": "react-faceless",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:BananaBobby/react-faceless.git",
+  "author": "Dmitry Belyaev <blv.dmitry@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "start-storybook -p 9001 -c .storybook -s dist/storybook/"
+  },
+  "devDependencies": {
+    "@storybook/react": "^5.0.11",
+    "@types/react": "^16.8.18",
+    "@types/react-dom": "^16.8.4",
+    "@types/storybook__react": "^4.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
