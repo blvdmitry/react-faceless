@@ -1,0 +1,39 @@
+@import "variables.css";
+
+.holder {
+	position: fixed;
+	width: 320px;
+	z-index: var(--z-index-toast);
+}
+
+.holder.--holder-position-bottom-left {
+	bottom: var(--4dp);
+	left: var(--4dp);
+}
+
+.holder.--holder-position-bottom-right {
+	bottom: var(--4dp);
+	right: var(--4dp);
+}
+
+.holder.--holder-position-bottom {
+	bottom: var(--4dp);
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.holder.--holder-position-top-left {
+	top: var(--4dp);
+	left: var(--4dp);
+}
+
+.holder.--holder-position-top-right {
+	top: var(--4dp);
+	right: var(--4dp);
+}
+
+.holder.--holder-position-top {
+	top: var(--4dp);
+	left: 50%;
+	transform: translateX(-50%);
+}

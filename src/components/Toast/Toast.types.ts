@@ -10,10 +10,11 @@ export type ContextData = {
   hide: () => void,
 };
 
-// TODO: Add position and timeout
 export type ProviderProps = {
   children: React.ReactNode,
   face: React.ComponentType,
+  position?: 'bottom-left' | 'bottom-right' | 'bottom' | 'top-left' | 'top-right' | 'top',
+  timeout?: number,
 };
 
 export type Props = {
