@@ -10,6 +10,7 @@ Next:
 - Logo
 - Documentation
 - Landing page
+- Package.json keywords
 
 Future ideas:
 - Default faces
