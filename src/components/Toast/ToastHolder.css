@@ -1,0 +1,78 @@
+@import "variables.css";
+
+.root {
+	position: fixed;
+	display: inline-block;
+	vertical-align: top;
+	z-index: var(--z-index-toast);
+	transition: var(--speed-medium) var(--easing-accelerate);
+	transition-property: transform, opacity;
+	padding: var(--4dp);
+	opacity: 0;
+	will-change: transform, opacity;
+}
+
+.root.--visible {
+	opacity: 1;
+	transition-timing-function: var(--easing-decelerate);
+}
+
+.root.--position-bottom-left {
+	bottom: 0;
+	left: 0;
+	transform: translateY(100%);
+
+	&.--visible {
+		transform: translateY(0);
+ 	}
+}
+
+.root.--position-bottom-right {
+	bottom: 0;
+	right: 0;
+	transform: translateY(100%);
+
+	&.--visible {
+		transform: translateY(0);
+	}
+}
+
+.root.--position-bottom {
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 100%);
+
+	&.--visible {
+		transform: translate(-50%, 0);
+	}
+}
+
+.root.--position-top-left {
+	top: 0;
+	left: 0;
+	transform: translateY(-100%);
+
+	&.--visible {
+		transform: translateY(0);
+	}
+}
+
+.root.--position-top-right {
+	top: 0;
+	right: 0;
+	transform: translateY(-100%);
+
+	&.--visible {
+		transform: translateY(0);
+	}
+}
+
+.root.--position-top {
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -100%);
+
+	&.--visible {
+		transform: translate(-50%, 0);
+	}
+}

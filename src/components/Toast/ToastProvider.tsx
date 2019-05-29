@@ -1,21 +1,41 @@
 import React from 'react';
-import classnames from 'utilities/classnames';
+import wait from 'utilities/wait';
+import nextFrame from 'utilities/nextFrame';
 import ToastContext from './ToastContext';
+import ToastHolder from './ToastHolder';
 import * as T from './Toast.types';
-import s from './Toast.css';
 
-const ToastProvider = (props: T.ProviderProps) => {
-  const { children, face: Face, position = 'bottom-left' } = props;
+const ToastProvider: React.ComponentType<T.ProviderProps> = props => {
+  const { children, face: Face, timeout } = props;
+  const timer = React.useRef<number>();
   const [faceProps, setFaceProps] = React.useState<T.Props | null>(null);
-  const holderClassNames = classnames(s.holder, position && s[`--holder-position-${position}`]);
+  const [visible, setVisible] = React.useState(false);
 
-  const show = (props: T.FaceProps) => {
+  const startTimer = () => {
+    timer.current = window.setTimeout(() => hide(), timeout);
+  };
+
+  const stopTimer = () => {
+    clearTimeout(timer.current);
+  };
+
+  const hide = async () => {
+    await setVisible(false);
+    await wait(250);
+    await setFaceProps(null);
+    stopTimer();
+  };
+
+  const show = async (props: T.FaceProps) => {
+    if (faceProps) await hide();
+
     setFaceProps(props);
+    nextFrame(() => setVisible(true));
+    startTimer();
   };
 
-  const hide = () => {
-    setFaceProps(null);
-  };
+  const handleMouseEnter = () => stopTimer();
+  const handleMouseOut = () => startTimer();
 
   return (
     <ToastContext.Provider value={{ show, hide }}>
@@ -23,13 +43,18 @@ const ToastProvider = (props: T.ProviderProps) => {
 
       {
         faceProps && (
-          <div className={holderClassNames}>
+          <ToastHolder {...props} visible={visible} onMouseEnter={handleMouseEnter} onMouseOut={handleMouseOut}>
             <Face {...faceProps} />
-          </div>
+          </ToastHolder>
         )
       }
     </ToastContext.Provider>
   );
+};
+
+ToastProvider.defaultProps = {
+  timeout: 4000,
+  position: 'bottom-left',
 };
 
 export default ToastProvider;

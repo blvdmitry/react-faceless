@@ -2,4 +2,12 @@
 	--4dp: 16px;
 
 	--z-index-toast: 9000;
+
+	--speed-fast: 0.15s;
+	--speed-medium: 0.25s;
+	--speed-slow: 0.3s;
+
+	--easing-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+	--easing-decelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
+	--easing-accelerate: cubic-bezier(0.4, 0.0, 1, 1);
 }

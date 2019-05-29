@@ -6,7 +6,7 @@ const Story = () => {
   const { show, hide } = Toast.use();
 
   const handleClick = () => {
-    show({ text: 'Toast triggered', onClick: hide });
+    show({ text: 'Toast triggered', onClick: hide, actionText: 'Hide' });
   };
 
   return <button onClick={handleClick}>Show toast</button>
@@ -14,15 +14,15 @@ const Story = () => {
 
 const Face = (props: any) => {
   return (
-    <button style={{ background: '#333', padding: 16, borderRadius: 4, color: '#fff' }} onClick={props.onClick}>
-      { props.text }
-    </button>
+    <div style={{ background: '#333', padding: 16, borderRadius: 4, color: '#fff' }}>
+      { props.text } <button onClick={props.onClick}>{ props.actionText }</button>
+    </div>
   );
 };
 
 storiesOf('Toast', module)
   .add('Default', () => (
-    <Toast.Provider face={Face}>
+    <Toast.Provider face={Face} position="bottom-right">
       <Story />
     </Toast.Provider>
   ));

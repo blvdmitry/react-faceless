@@ -1,7 +1,6 @@
 # react-faceless
 
-Current todo: 
-- Implement animated entering/exiting
-- Support positions
-- Support timeout
+Current todo:
+- Remove hardcoded transition timing value
+- Build process for css
 - Generic for FaceProps type?

@@ -17,6 +17,12 @@ export type ProviderProps = {
   timeout?: number,
 };
 
+export type HolderProps = ProviderProps & {
+  visible: boolean,
+  onMouseEnter: () => void,
+  onMouseOut: () => void,
+};
+
 export type Props = {
   children: React.ReactNode,
 };
