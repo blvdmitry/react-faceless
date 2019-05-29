@@ -1,9 +1,9 @@
 module.exports =  {
   parser:  '@typescript-eslint/parser',
-  extends:  [
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends:  ['airbnb-typescript'],
+  "env": {
+    "browser": true,
+  },
   parserOptions:  {
     ecmaVersion:  2018,
     sourceType: 'module',
@@ -14,7 +14,12 @@ module.exports =  {
   rules:  {
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/explicit-function-return-type": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "import/no-unresolved": "off", // baseUrl
+    "import/export": "off", // function overload
+    "no-shadow": "off",
+    "object-curly-newline": "off", // props destructuring on the same line
+    "jsx-a11y/mouse-events-have-key-events": "off", // onMouseEnter component prop
   },
   settings:  {
     react:  {

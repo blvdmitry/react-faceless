@@ -39,7 +39,12 @@ const ToastProvider: React.ComponentType<T.ProviderProps> = props => {
 
   const show = (props: T.FaceProps) => {
     addToQueue(props);
-    if (faceProps) return hide();
+
+    if (faceProps) {
+      hide();
+      return;
+    }
+
     showFromQueue();
   };
 

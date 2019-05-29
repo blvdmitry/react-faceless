@@ -15,13 +15,16 @@ const Story: React.FunctionComponent = () => {
     show({ text: 'Toast triggered', onClick: hide, actionText: 'Hide' });
   };
 
-  return <button onClick={handleClick}>Show toast</button>
+  return <button type="button" onClick={handleClick}>Show toast</button>;
 };
 
 const Face: React.ComponentType<Props> = props => {
+  const { text, onClick, actionText } = props;
+
   return (
     <div style={{ background: '#333', padding: 16, borderRadius: 4, color: '#fff' }}>
-      { props.text } <button onClick={props.onClick}>{ props.actionText }</button>
+      { text }
+      <button type="button" onClick={onClick}>{ actionText }</button>
     </div>
   );
 };

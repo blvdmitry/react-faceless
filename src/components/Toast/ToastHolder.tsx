@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'utilities/classnames';
 import nextFrame from 'utilities/nextFrame';
 import * as T from './Toast.types';
-import s from "./ToastHolder.css";
+import s from './ToastHolder.css';
 
 let transitionLocked = false;
 
@@ -17,7 +17,9 @@ const ToastHolder = (props: T.HolderProps) => {
     if (!visible) {
       onAfterLeave();
       transitionLocked = true;
-      nextFrame(() => transitionLocked = false);
+      nextFrame(() => {
+        transitionLocked = false;
+      });
     }
   };
 
