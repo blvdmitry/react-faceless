@@ -1,2 +1,3 @@
 **/*.css
 **/*.story.tsx
+dist

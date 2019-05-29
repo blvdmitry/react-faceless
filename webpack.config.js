@@ -19,14 +19,12 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: 'components/[name]/index.js',
     libraryTarget: 'umd',
-    globalObject: 'this',
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
+      filename: 'components/[name]/[name].css',
     }),
   ],
   resolve: {

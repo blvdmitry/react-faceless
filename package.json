@@ -1,6 +1,6 @@
 {
   "name": "react-faceless",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Behavior patterns for React with your UI components",
   "main": "index.js",
   "types": "index.d.ts",
@@ -9,9 +9,9 @@
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook -s dist/storybook/",
-    "build": "webpack",
+    "build": "rm -rf dist && webpack",
     "lint": "eslint --ext .ts,.tsx src/**/*",
-    "release": "rm -rf dist && yarn build && cp package.json dist && cd dist && yarn publish -f",
+    "release": "yarn build && cp package.json dist && cd dist && yarn publish -f",
     "postpublish": "cd .. && cp dist/package.json ."
   },
   "husky": {
@@ -27,6 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
     "css-loader": "^2.1.1",
+    "declaration-bundler-webpack-plugin": "^1.0.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-typescript": "^4.0.0",
     "eslint-plugin-import": "^2.17.3",
