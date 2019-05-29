@@ -11,7 +11,8 @@
     "start": "start-storybook -p 9001 -c .storybook -s dist/storybook/",
     "build": "webpack",
     "lint": "eslint --ext .ts,.tsx src/**/*",
-    "release": "yarn build && cp package.json dist && cd dist && yarn publish"
+    "release": "yarn build && cp package.json dist && cd dist && yarn publish -f",
+    "postpublish": "cp dist/package.json ."
   },
   "husky": {
     "hooks": {
