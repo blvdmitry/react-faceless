@@ -21,6 +21,7 @@ export type HolderProps = ProviderProps & {
   visible: boolean,
   onMouseEnter: () => void,
   onMouseOut: () => void,
+  onAfterLeave: () => void,
 };
 
 export type Props = {
