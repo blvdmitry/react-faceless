@@ -2,8 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Toast from './index';
 
+type ToastProps = { text: string, onClick: () => void, actionText: string };
+
 const Story = () => {
-  const { show, hide } = Toast.use();
+  const { show, hide } = Toast.use<ToastProps>();
 
   const handleClick = () => {
     show({ text: 'Toast triggered', onClick: hide, actionText: 'Hide' });

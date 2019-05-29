@@ -7,10 +7,11 @@ const context = React.createContext<T.ContextData>({
   hide: () => console.error(error),
 });
 
-export const useToast = () => {
+export function useToast<Props>(): T.ContextData<Props>;
+export function useToast () {
   const { show, hide } = React.useContext(context);
 
   return { show, hide };
-};
+}
 
 export default context;

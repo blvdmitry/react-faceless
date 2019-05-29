@@ -1,12 +1,7 @@
 import React from 'react';
 
-// TODO: Replace any with generic?
-export type FaceProps = any;
-
-export type Show = (props: FaceProps) => void;
-
-export type ContextData = {
-  show: Show,
+export type ContextData<T = unknown> = {
+  show: (props: T) => void,
   hide: () => void,
 };
 

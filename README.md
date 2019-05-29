@@ -1,5 +1,7 @@
 # react-faceless
 
-Current todo:
-- Generic for FaceProps type?
+Todo:
 - Build process for css
+
+Future ideas:
+- Custom z-index
