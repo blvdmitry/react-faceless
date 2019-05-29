@@ -1,6 +1,6 @@
 {
   "name": "react-faceless",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Behavior patterns for React with your UI components",
   "main": "index.js",
   "types": "index.d.ts",

@@ -1,7 +1,7 @@
 # react-faceless
 
 Todo:
-- Correct import structure of the package
+- Fix git add from dist folder when published
 
 Next:
 - Overlay
