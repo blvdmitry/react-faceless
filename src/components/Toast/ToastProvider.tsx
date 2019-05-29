@@ -8,7 +8,7 @@ const ToastProvider: React.ComponentType<T.ProviderProps> = props => {
   const { children, face: Face, timeout } = props;
   const timer = React.useRef<number>();
   const queue = React.useRef<T.FaceProps[]>([]);
-  const [faceProps, setFaceProps] = React.useState<T.Props | null>(null);
+  const [faceProps, setFaceProps] = React.useState<T.FaceProps | null>(null);
   const [visible, setVisible] = React.useState(false);
 
   const startTimer = () => {
@@ -24,9 +24,11 @@ const ToastProvider: React.ComponentType<T.ProviderProps> = props => {
   };
 
   const showFromQueue = () => {
-    if (!queue.current.length) return;
+    const firstProps = queue.current.shift();
 
-    setFaceProps(queue.current.shift());
+    if (!firstProps) return;
+    
+    setFaceProps(firstProps);
     nextFrame(() => setVisible(true));
     startTimer();
   };

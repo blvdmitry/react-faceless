@@ -1,6 +1,8 @@
 import React from 'react';
 
-export type ContextData<T = unknown> = {
+export type FaceProps = {};
+
+export type ContextData<T = FaceProps> = {
   show: (props: T) => void,
   hide: () => void,
 };

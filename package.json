@@ -6,7 +6,8 @@
   "author": "Dmitry Belyaev <blv.dmitry@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook -s dist/storybook/"
+    "start": "start-storybook -p 9001 -c .storybook -s dist/storybook/",
+    "build": ""
   },
   "devDependencies": {
     "@storybook/react": "^5.0.11",
