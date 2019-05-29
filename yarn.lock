@@ -6950,6 +6950,11 @@ react-error-overlay@^5.1.4:
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
 
+react-faceless@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/react-faceless/-/react-faceless-0.0.5.tgz#024506e5a7b92deffbed1d0187b5acdb5e0dca1b"
+  integrity sha512-zm8BizY9nd4L5YgOQIyDDkuo2SqztL9P8cbMEbyzKp4kl8MBCoDXmAaFPkGFuwPSJJx+VCBLaHfn/sj4D08fNQ==
+
 react-fast-compare@^2.0.2:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"

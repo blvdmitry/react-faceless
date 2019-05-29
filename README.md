@@ -1,7 +1,7 @@
 # react-faceless
 
 Todo:
-- Publish first version of the package
+- Correct import structure of the package
 
 Next:
 - Overlay

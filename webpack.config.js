@@ -14,7 +14,7 @@ module.exports = {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
   entry: {
-    toast: path.resolve(APP_DIR, 'components/Toast/index.ts'),
+    Toast: path.resolve(APP_DIR, 'components/Toast/index.ts'),
   },
   devtool: 'source-map',
   output: {

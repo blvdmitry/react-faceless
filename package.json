@@ -1,6 +1,6 @@
 {
   "name": "react-faceless",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Behavior patterns for React with your UI components",
   "main": "index.js",
   "types": "index.d.ts",
@@ -11,7 +11,7 @@
     "start": "start-storybook -p 9001 -c .storybook -s dist/storybook/",
     "build": "webpack",
     "lint": "eslint --ext .ts,.tsx src/**/*",
-    "release": "yarn build && cp package.json dist && cd dist && yarn publish -f",
+    "release": "rm -rf dist && yarn build && cp package.json dist && cd dist && yarn publish -f",
     "postpublish": "cd .. && cp dist/package.json ."
   },
   "husky": {
@@ -50,5 +50,8 @@
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "react-faceless": "^0.0.5"
   }
 }
