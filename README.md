@@ -13,4 +13,5 @@ Next:
 
 Future ideas:
 - Default faces
+- Hide Toast in the opposite direction
 - Custom z-index

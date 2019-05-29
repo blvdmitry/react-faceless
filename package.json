@@ -1,6 +1,6 @@
 {
   "name": "react-faceless",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Behavior patterns for React with your UI components",
   "main": "index.js",
   "types": "index.d.ts",
@@ -50,8 +50,5 @@
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
-  },
-  "dependencies": {
-    "react-faceless": "^0.0.5"
   }
 }

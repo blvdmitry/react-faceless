@@ -4,6 +4,6 @@ module.exports = {
       path: ['./src/styles/'],
     },
     'postcss-apply': {},
-    'postcss-preset-env': { preserve: false, browsers: 'last 3 versions' },
+    'postcss-preset-env': { preserve: false, stage: 0, browsers: 'last 3 versions' },
   },
 };
