@@ -8,7 +8,7 @@ const TS_CONFIG_PATH = path.resolve(__dirname, './tsconfig.json');
 module.exports = {
   mode: 'production',
   entry: {
-    toast: './src/index.ts',
+    toast: path.resolve(APP_DIR, 'components/Toast/index.ts'),
   },
   devtool: 'source-map',
   output: {

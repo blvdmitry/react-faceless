@@ -11,6 +11,10 @@ const ToastProvider: React.ComponentType<T.ProviderProps> = props => {
   const [faceProps, setFaceProps] = React.useState<T.FaceProps | null>(null);
   const [visible, setVisible] = React.useState(false);
 
+  const hide = () => {
+    setVisible(false);
+  };
+
   const startTimer = () => {
     timer.current = window.setTimeout(() => hide(), timeout);
   };
@@ -27,14 +31,10 @@ const ToastProvider: React.ComponentType<T.ProviderProps> = props => {
     const firstProps = queue.current.shift();
 
     if (!firstProps) return;
-    
+
     setFaceProps(firstProps);
     nextFrame(() => setVisible(true));
     startTimer();
-  };
-
-  const hide = () => {
-    setVisible(false);
   };
 
   const show = (props: T.FaceProps) => {

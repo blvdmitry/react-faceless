@@ -1,1 +1,1 @@
-export default (...classNames: string[]) => classNames.filter(Boolean).join(' ');
+export default (...classNames: (string | boolean | undefined | null)[]) => classNames.filter(Boolean).join(' ');
