@@ -7,7 +7,7 @@
 	z-index: var(--z-index-toast);
 	transition: var(--speed-medium) var(--easing-accelerate);
 	transition-property: transform, opacity;
-	padding: var(--4dp);
+	padding: var(--unit-4dp);
 	opacity: 0;
 	will-change: transform, opacity;
 }

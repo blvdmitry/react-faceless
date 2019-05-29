@@ -1,7 +1,15 @@
 # react-faceless
 
 Todo:
-- Build process for css
+- Publish first version of the package
+
+Next:
+- Overlay
+
+100% Before the release:
+- Logo
+- Documentation
+- Landing page
 
 Future ideas:
 - Default faces
