@@ -16,6 +16,7 @@ module.exports = {
   entry: {
     Toast: path.resolve(APP_DIR, 'components/Toast/index.ts'),
     Overlay: path.resolve(APP_DIR, 'components/Overlay/index.ts'),
+    Modal: path.resolve(APP_DIR, 'components/Modal/index.ts'),
   },
   devtool: 'source-map',
   output: {

@@ -1,0 +1,14 @@
+@import "variables.css";
+
+.root {
+	display: table;
+	width: 100%;
+	min-height: 100%;
+}
+
+.inner {
+	display: table-cell;
+	padding: var(--unit-4dp);
+	vertical-align: middle;
+	text-align: center;
+}

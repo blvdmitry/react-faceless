@@ -1,10 +1,13 @@
 # react-faceless
 
 Todo:
-- Overlay
+- Modal
 
 Next:
-- Modal
+- Drawer
+- Tooltip
+- Popover
+- Scroll?
 
 100% Before the release:
 - Logo
@@ -14,6 +17,7 @@ Next:
 
 Future base features:
 - Default faces
+- Modal.Holder active property for ssr
 - Hide Toast in the the opposite direction
 - Accessibility when it's possible + in default faces
 

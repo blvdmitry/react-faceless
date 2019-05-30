@@ -9,7 +9,7 @@
 	background: rgba(0, 0, 0, 0.6);
 	opacity: 0;
 	visibility: hidden;
-	transition: var(--speed-medium) var(--easing-standard);
+	transition: var(--speed-slow) var(--easing-standard);
 	transition-property: opacity, visibility;
 	overflow: auto;
 	z-index: var(--z-index-overlay);
