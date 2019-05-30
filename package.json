@@ -1,6 +1,6 @@
 {
   "name": "react-faceless",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "description": "Behavior patterns for React with your UI components",
   "main": "index.js",
   "types": "index.d.ts",
@@ -14,6 +14,10 @@
     "release": "yarn build && mv dist/* . && yarn publish",
     "postpublish": "rm -rf components utilities"
   },
+  "files": [
+    "components",
+    "utilities"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint"

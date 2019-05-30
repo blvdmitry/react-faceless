@@ -10,7 +10,9 @@ Next:
 - Logo
 - Documentation
 - Landing page
+- Package.json keywords
 
 Future ideas:
 - Default faces
 - Custom z-index
+- Hide Toast in the opposite direction
