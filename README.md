@@ -1,18 +1,18 @@
 # react-faceless
 
 Todo:
-- Modal
+- Drawer
 
 Next:
-- Drawer
 - Tooltip
 - Popover
 - Scroll?
 
 100% Before the release:
 - Logo
-- Documentation
+- Share image
 - Landing page
+- Documentation
 - Package.json keywords
 
 Future base features:
