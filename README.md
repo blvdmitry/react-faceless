@@ -1,10 +1,10 @@
 # react-faceless
 
 Todo:
-- Publish first version of the package
+- Overlay
 
 Next:
-- Overlay
+- Modal
 
 100% Before the release:
 - Logo
@@ -12,7 +12,12 @@ Next:
 - Landing page
 - Package.json keywords
 
-Future ideas:
+Future base features:
 - Default faces
+- Hide Toast in the the opposite direction
+- Accessibility when it's possible + in default faces
+
+Customisation:
 - Custom z-index
-- Hide Toast in the opposite direction
+- Custom animation classes
+- Custom Overlay styles

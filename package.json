@@ -12,11 +12,13 @@
     "build": "rm -rf dist && webpack",
     "lint": "eslint --ext .ts,.tsx src/**/*",
     "release": "yarn build && mv dist/* . && yarn publish",
-    "postpublish": "rm -rf components utilities"
+    "postpublish": "rm -rf components utilities hooks constants"
   },
   "files": [
     "components",
-    "utilities"
+    "utilities",
+    "hooks",
+    "constants"
   ],
   "husky": {
     "hooks": {

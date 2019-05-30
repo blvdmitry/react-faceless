@@ -31,7 +31,12 @@ const Face: React.ComponentType<Props> = props => {
 
 storiesOf('Toast', module)
   .add('Default', () => (
-    <Toast.Provider face={Face} position="bottom-right">
+    <Toast.Provider face={Face}>
+      <Story />
+    </Toast.Provider>
+  ))
+  .add('Custom position', () => (
+    <Toast.Provider face={Face} position="top">
       <Story />
     </Toast.Provider>
   ));

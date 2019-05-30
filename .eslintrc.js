@@ -17,6 +17,7 @@ module.exports =  {
     "react/prop-types": "off",
     "import/no-unresolved": "off", // baseUrl
     "import/export": "off", // function overload
+    "import/prefer-default-export": "off",
     "no-shadow": "off",
     "object-curly-newline": "off", // props destructuring on the same line
     "jsx-a11y/mouse-events-have-key-events": "off", // onMouseEnter component prop

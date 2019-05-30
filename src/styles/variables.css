@@ -1,7 +1,8 @@
 :root {
 	--unit-4dp: 16px;
 
-	--z-index-toast: 9000;
+	--z-index-overlay: 9400;
+	--z-index-toast: 9700;
 
 	--speed-fast: 0.15s;
 	--speed-medium: 0.25s;
