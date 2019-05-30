@@ -1,12 +1,16 @@
 # react-faceless
 
 Todo:
+- Extract base dialog
 - Drawer
+- Extract useTransitionEnd
 
 Next:
 - Tooltip
 - Popover
-- Scroll?
+- Bundle with everything
+- RTL
+- Test package
 
 100% Before the release:
 - Logo
@@ -20,8 +24,9 @@ Future base features:
 - Modal.Holder active property for ssr
 - Hide Toast in the the opposite direction
 - Accessibility when it's possible + in default faces
+- Scroll component?
 
 Customisation:
-- Custom z-index
-- Custom animation classes
+- Custom z-index for all components
+- Custom animation classes for all components
 - Custom Overlay styles
