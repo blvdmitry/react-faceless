@@ -21,6 +21,7 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'components/[name]/index.js',
     libraryTarget: 'umd',
+    globalObject: 'this',
   },
   plugins: [
     new MiniCssExtractPlugin({

@@ -1,7 +1,9 @@
 {
   "name": "react-faceless",
-  "version": "0.0.10",
+  "version": "0.0.1",
   "description": "Behavior patterns for React with your UI components",
+  "main": "index.js",
+  "types": "index.d.ts",
   "repository": "git@github.com:BananaBobby/react-faceless.git",
   "author": "Dmitry Belyaev <blv.dmitry@gmail.com> (https://bananabobby.github.io)",
   "license": "MIT",
@@ -12,10 +14,6 @@
     "release": "yarn build && mv dist/* . && yarn publish",
     "postpublish": "rm -rf components utilities"
   },
-  "files": [
-    "components",
-    "utilities"
-  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint"
@@ -29,7 +27,6 @@
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
     "css-loader": "^2.1.1",
-    "declaration-bundler-webpack-plugin": "^1.0.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-typescript": "^4.0.0",
     "eslint-plugin-import": "^2.17.3",
