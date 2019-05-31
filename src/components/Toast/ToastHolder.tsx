@@ -1,26 +1,19 @@
 import React from 'react';
 import classnames from 'utilities/classnames';
-import nextFrame from 'utilities/nextFrame';
+import getTransitionEndHandler from 'utilities/getTransitionEndHandler';
 import * as T from './Toast.types';
 import s from './ToastHolder.css';
 
-let transitionLocked = false;
+const handleTransition = getTransitionEndHandler();
 
 const ToastHolder = (props: T.HolderProps) => {
-  const { children, position = 'bottom-left', visible, onMouseEnter, onMouseOut, onAfterLeave } = props;
+  const { children, position, visible, onMouseEnter, onMouseOut, onAfterLeave } = props;
   const rootClassNames = classnames(s.root, position && s[`--position-${position}`], visible && s['--visible']);
 
   const handleTransitionEnd = () => {
-    // Trigger only once, instead of per each transition property
-    if (transitionLocked) return;
-
-    if (!visible) {
-      onAfterLeave();
-      transitionLocked = true;
-      nextFrame(() => {
-        transitionLocked = false;
-      });
-    }
+    handleTransition(() => {
+      if (!visible) onAfterLeave();
+    });
   };
 
   return (

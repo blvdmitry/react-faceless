@@ -1,7 +1,7 @@
 import React from 'react';
-import * as T from './Modal.types';
+import * as T from './Dialog.types';
 
-const error = 'You\'re using toasts outside of the ModalProvider';
+const error = 'You\'re using toasts outside of the Dialog.Provider';
 const context = React.createContext<T.ContextData>({
   // eslint-disable-next-line
   show: () => console.error(error),
@@ -14,7 +14,7 @@ const context = React.createContext<T.ContextData>({
   visible: false,
 });
 
-export const useModal: T.UseModal = id => {
+export const useDialog: T.UseDialog = id => {
   const instance = React.useContext(context);
 
   return {

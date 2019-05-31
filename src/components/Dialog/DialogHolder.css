@@ -1,0 +1,79 @@
+@import "variables.css";
+
+.root {
+	text-align: left;
+	transition: var(--speed-medium) var(--easing-accelerate);
+	transition-property: opacity, transform;
+	will-change: opacity, transform;
+}
+
+.root.--visible {
+	transition-duration: var(--speed-medium);
+	transition-timing-function: var(--easing-decelerate);
+}
+
+.root.--position-center {
+	opacity: 0;
+	transform: translateY(var(--unit-4dp));
+	display: inline-block;
+	vertical-align: top;
+
+	&.--visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.root.--position-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	transform: translateX(100%);
+
+	&.--visible {
+		transform: translateX(0);
+	}
+}
+
+.root.--position-top {
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	transform: translateY(-100%);
+
+	&.--visible {
+		transform: translateY(0);
+	}
+}
+
+.root.--position-left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	transform: translateX(-100%);
+
+	&.--visible {
+		transform: translateX(0);
+	}
+}
+
+.root.--position-bottom {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	transform: translateY(100%);
+
+	&.--visible {
+		transform: translateY(0);
+	}
+}

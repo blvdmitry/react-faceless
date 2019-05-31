@@ -26,7 +26,8 @@ const Overlay = (props: T.Props) => {
 
   return (
     <div className={rootClassNames}>
-      { children }
+      <div className={s.content}>{ children }</div>
+      <div className={s.scrim} />
     </div>
   );
 };

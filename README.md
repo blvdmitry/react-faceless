@@ -1,15 +1,13 @@
 # react-faceless
 
 Todo:
-- Extract base dialog
-- Drawer
-- Extract useTransitionEnd
+- Tooltip
 
 Next:
-- Tooltip
 - Popover
 - Bundle with everything
 - RTL
+- Lock close
 - Test package
 
 100% Before the release:
@@ -20,7 +18,7 @@ Next:
 - Package.json keywords
 
 Future base features:
-- Default faces
+- Default faces?
 - Modal.Holder active property for ssr
 - Hide Toast in the the opposite direction
 - Accessibility when it's possible + in default faces
