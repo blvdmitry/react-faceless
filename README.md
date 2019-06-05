@@ -6,8 +6,8 @@ Todo:
 Next:
 - Popover
 - Bundle with everything
-- RTL
 - Lock close
+- RTL
 - Test package
 
 100% Before the release:
