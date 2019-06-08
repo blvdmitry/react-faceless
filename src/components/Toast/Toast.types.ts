@@ -9,7 +9,7 @@ export interface ContextData<T = FaceProps> {
 
 export interface ProviderProps {
   children: React.ReactNode;
-  face: React.ComponentType;
+  face: React.ComponentType<any>;
   position?: 'bottom-left' | 'bottom-right' | 'bottom' | 'top-left' | 'top-right' | 'top';
   timeout?: number;
 }
