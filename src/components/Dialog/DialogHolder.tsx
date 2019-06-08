@@ -10,20 +10,22 @@ import s from './DialogHolder.css';
 const handleTransition = getTransitionEndHandler();
 
 const DialogHolder: React.ComponentType<T.HolderProps> = props => {
-  const { id, children, position } = props;
-  const { activeId, visible, ref, hide, setActiveId } = React.useContext(DialogContext);
+  const { id, children, position, onClose } = props;
+  const { activeId, visible, ref, hide, showFromQueue } = React.useContext(DialogContext);
   const rootRef = React.useRef(null);
   const isActive = activeId === id;
 
   useOnClickOutside(rootRef, hide);
 
-  console.log(activeId, visible);
-
   if (!isActive || !ref || !ref.current) return null;
 
   const handleTransitionEnd = () => {
     handleTransition(() => {
-      if (!visible) setActiveId(null);
+      if (!visible) {
+        showFromQueue();
+
+        if (onClose) onClose();
+      }
     });
   };
 

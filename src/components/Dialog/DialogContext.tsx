@@ -6,9 +6,9 @@ const context = React.createContext<T.ContextData>({
   // eslint-disable-next-line
   show: () => console.error(error),
   // eslint-disable-next-line
-  hide: () => console.error(error),
+  showFromQueue: () => console.error(error),
   // eslint-disable-next-line
-  setActiveId: () => console.error(error),
+  hide: () => console.error(error),
   ref: null,
   activeId: null,
   visible: false,
