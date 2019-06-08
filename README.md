@@ -1,5 +1,8 @@
 # react-faceless
 
+Temporary documentation:
+https://twitter.com/blv_dmitry/status/1134548051505352709 :)
+
 Todo:
 - Tooltip
 
