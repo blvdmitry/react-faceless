@@ -22,6 +22,7 @@ Next:
 
 Future base features:
 - Default faces?
+- Face for overlay
 - Modal.Holder active property for ssr
 - Hide Toast in the the opposite direction
 - Accessibility when it's possible + in default faces
@@ -30,4 +31,3 @@ Future base features:
 Customisation:
 - Custom z-index for all components
 - Custom animation classes for all components
-- Custom Overlay styles
