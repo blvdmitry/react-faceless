@@ -19,6 +19,7 @@ module.exports =  {
     "import/export": "off", // function overload
     "import/prefer-default-export": "off",
     "no-shadow": "off",
+    "max-len": ["error", 150],
     "object-curly-newline": "off", // props destructuring on the same line
     "jsx-a11y/mouse-events-have-key-events": "off", // onMouseEnter component prop
   },

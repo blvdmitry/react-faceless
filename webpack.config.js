@@ -14,6 +14,7 @@ module.exports = {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
   entry: {
+    index: path.resolve(APP_DIR, 'index.ts'),
     Toast: path.resolve(APP_DIR, 'components/Toast/index.ts'),
     Overlay: path.resolve(APP_DIR, 'components/Overlay/index.ts'),
     Dialog: path.resolve(APP_DIR, 'components/Dialog/index.ts'),
@@ -21,13 +22,13 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'components/[name]/index.js',
+    filename: chunkData => (chunkData.chunk.name === 'index' ? '[name].js' : 'components/[name]/index.js'),
     libraryTarget: 'umd',
     globalObject: 'this',
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'components/[name]/[name].css',
+      moduleFilename: ({ name }) => (name === 'index' ? '[name].css' : 'components/[name]/[name].css'),
     }),
   ],
   resolve: {

@@ -13,7 +13,7 @@ export interface ContextData {
   activeId: CurrentId;
 }
 
-export type UseDialog = (id: ID) => ContextData & { show: () => void };
+export type UseDialog = (id: ID) => { show: () => void, hide: () => void, activeId: CurrentId };
 
 export interface HolderProps {
   id: CurrentId;

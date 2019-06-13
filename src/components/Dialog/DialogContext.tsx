@@ -18,8 +18,9 @@ export const useDialog: T.UseDialog = id => {
   const instance = React.useContext(context);
 
   return {
-    ...instance,
+    hide: instance.hide,
     show: () => instance.show(id),
+    activeId: instance.activeId,
   };
 };
 

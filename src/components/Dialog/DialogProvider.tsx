@@ -12,9 +12,7 @@ const DialogProvider = (props: T.ProviderProps) => {
   const [visible, setVisible] = React.useState(false);
   const queue = React.useRef<string[]>([]);
 
-  const hide = () => {
-    setVisible(false);
-  };
+  const hide = () => setVisible(false);
 
   const showFromQueue = () => {
     const id = queue.current.shift();
@@ -33,15 +31,14 @@ const DialogProvider = (props: T.ProviderProps) => {
 
     if (activeId) {
       hide();
-    } else {
-      showFromQueue();
+      return;
     }
+
+    showFromQueue();
   };
 
   return (
-    <DialogContext.Provider
-      value={{ show, showFromQueue, hide, ref, activeId, setActiveId, visible }}
-    >
+    <DialogContext.Provider value={{ show, showFromQueue, hide, ref, activeId, setActiveId, visible }}>
       { children }
 
       {
